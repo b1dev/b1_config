@@ -1,5 +1,6 @@
 en:
   b1_config:
-    e_1: "Невозможно загрузить файл конфигурации"
-    e_2: "Конфигурация для %{meth} отсутсвует" 
-    e_3: "Конфигурация для окружения %{env} отсуствует"
+    e_1: "Unable to load the configuration file"
+    e_2: "Configuration for %{meth} is missing"
+    e_3: "Configuration environment for %{env} is not available"
+    e_4: "The specified path: '%{path}' does not exist"

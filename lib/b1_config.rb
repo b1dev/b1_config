@@ -13,9 +13,15 @@ module B1Config
     @@env = Rails.env if defined?(::Rails)
     @@load_paths << "#{Rails.root.to_s}/config/configs/"  if defined?(::Rails)
     yield self
+    B1Config.load_data
+    load_constant
+  end
+
+  # Load constant
+  def load_constant
     Kernel.send(:remove_const, B1Config.name) if Kernel.const_defined?(B1Config.name)
     Kernel.const_set(B1Config.name, B1Config::Options)
-    B1Config.load_data
+    self
   end
 
   # Load data from .yml files in load directories
