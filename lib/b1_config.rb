@@ -32,7 +32,7 @@ module B1Config
   # Add directory to config loaded path
   def add_load_path path
     path = "/" + path.to_s.split("/").reject(&:empty?).join("/") + "/"
-    @@load_paths << path.to_s unless @load_paths.include?(path.to_s)
+    @@load_paths << path.to_s unless @@load_paths.include?(path.to_s)
     self
   end
 
