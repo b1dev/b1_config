@@ -6,11 +6,10 @@ module B1Config
   extend self
   @@name = "Settings"
   @@env  = "development" 
-
+  @@load_paths = []
   mattr_accessor :name, :env
   # Setup moduleand set base params
   def setup &block
-    @@load_paths = []
     @@env = Rails.env if defined?(::Rails)
     @@load_paths << "#{Rails.root.to_s}/config/configs/"  if defined?(::Rails)
     yield self
