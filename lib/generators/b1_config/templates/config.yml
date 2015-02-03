@@ -1,0 +1,13 @@
+defaults: &defaults
+  message: "Test configuration B1Settings.message"
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+
+deployment:
+  <<: *defaults
