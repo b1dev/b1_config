@@ -27,7 +27,7 @@ module B1Config
 
   # Get registered constant
   def get_const
-    B1Config.name.constantinize
+    B1Config.name.constantize
   end
 
   # Add directory to config loaded path
