@@ -1,7 +1,5 @@
 module B1Config
   class Loader
-   DATA = {}
-   private_constant :DATA
    # Load yaml  files from directories and set it contains as options
    def self.load load_paths
     load_paths.each do |path|
